@@ -61,7 +61,13 @@ const Index = () => {
           </Section>
         )}
 
-        <Section id="education" eyebrow="Chapter II" title="Education">
+        <Section id="projects" eyebrow="Chapter II" title="Selected Projects">
+          <div className="grid md:grid-cols-2 gap-6">
+            {projects.map((p) => <ProjectCard key={p.id} p={p} />)}
+          </div>
+        </Section>
+
+        <Section id="education" eyebrow="Chapter III" title="Education">
           <div className="space-y-8">
             {education.map((e) => (
               <div key={e.id} className="grid md:grid-cols-[180px_1fr] gap-4 md:gap-8 pb-8 border-b border-border last:border-0">
@@ -79,7 +85,7 @@ const Index = () => {
           </div>
         </Section>
 
-        <Section id="experience" eyebrow="Chapter III" title="Experience">
+        <Section id="experience" eyebrow="Chapter IV" title="Experience">
           <div className="space-y-8">
             {experience.map((x) => (
               <div key={x.id} className="grid md:grid-cols-[180px_1fr] gap-4 md:gap-8 pb-8 border-b border-border last:border-0">
@@ -94,7 +100,7 @@ const Index = () => {
           </div>
         </Section>
 
-        <Section id="skills" eyebrow="Chapter IV" title="Skills & Expertise">
+        <Section id="skills" eyebrow="Chapter V" title="Skills & Expertise">
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
             {skills.map((s) => (
               <div key={s.id} className="flex justify-between items-baseline gap-4 pb-3 border-b border-dashed border-border">
@@ -102,12 +108,6 @@ const Index = () => {
                 <span className="text-muted-foreground text-sm text-right">{s.items}</span>
               </div>
             ))}
-          </div>
-        </Section>
-
-        <Section id="projects" eyebrow="Chapter V" title="Selected Projects">
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((p) => <ProjectCard key={p.id} p={p} />)}
           </div>
         </Section>
 

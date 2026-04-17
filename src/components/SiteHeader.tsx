@@ -17,17 +17,16 @@ const SiteHeader = () => {
           {!onAdmin && (
             <>
               <a href="#about" className="hover:text-accent transition-colors">About</a>
-              <a href="#experience" className="hover:text-accent transition-colors hidden sm:inline">Experience</a>
               <a href="#projects" className="hover:text-accent transition-colors">Projects</a>
+              <a href="#experience" className="hover:text-accent transition-colors hidden sm:inline">Experience</a>
               <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
             </>
           )}
-          <Link
-            to={onAdmin ? "/" : "/admin"}
-            className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground"
-          >
-            {onAdmin ? "View Site" : "Admin"}
-          </Link>
+          {onAdmin && (
+            <Link to="/" className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground">
+              View Site
+            </Link>
+          )}
         </nav>
       </div>
     </header>
