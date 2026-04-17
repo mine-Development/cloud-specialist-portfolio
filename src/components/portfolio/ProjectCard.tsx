@@ -28,7 +28,7 @@ const ProjectCard = ({ p }: { p: Project }) => (
           href={p.live_url}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium text-primary border-b border-primary/40 hover:border-primary pb-0.5 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-semibold bg-accent text-accent-foreground px-4 py-2 rounded-sm shadow-classical hover:bg-accent/90 hover:shadow-md transition-all uppercase tracking-wider"
         >
           <ExternalLink className="w-4 h-4" /> Live Demo
         </a>
@@ -38,7 +38,7 @@ const ProjectCard = ({ p }: { p: Project }) => (
           href={p.github_url}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium text-secondary border-b border-secondary/40 hover:border-secondary pb-0.5 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-semibold bg-primary text-primary-foreground px-4 py-2 rounded-sm shadow-classical hover:bg-primary/90 hover:shadow-md transition-all uppercase tracking-wider"
         >
           <Github className="w-4 h-4" /> Repository
         </a>
